@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Button from './Button';
+import TextInput from './Textinput'
 import './App.css';
+import styles from './styles/App_style';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div style={styles.container}>
+        <div style={styles.panel}>
+          <p style={styles.header}>BIG FISH</p>
+          <TextInput placeholder="Email" />
+          <TextInput placeholder="Password" />
+          <TextInput placeholder="Name" />
+          <Button label="Sign up"/>
+          <div style={styles.footer}>
+          <p style={styles.footer_text}>Already have an account?</p>
+          <p style={styles.footer_link}>Login</p>
+          </div>
+        </div>
+
       </div>
     );
   }
